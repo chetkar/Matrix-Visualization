@@ -50,6 +50,7 @@ data.probit  <- data$X$data$X[,ind_p]
 mycolor <- colorRampPalette(brewer.pal(5,"Spectral"))(100) 
 
 #Using gplots to plot custom heatmaps
+# Only Row Dendrogram are displayed, color key is displayed and both the row and columns are rotated
 heatmap.2(cor(data.normal),revC=TRUE,trace='none', dendrogram ="row",key=TRUE,density.info='none', col=mycolor, main="Heatmap of Correlation Submatrix of Continuous Data")
 
 heatmap.2(cor(data.probit,method="spearman"),revC=TRUE,trace='none', dendrogram ="row",key=TRUE,density.info='none', col=mycolor , main="Heatmap of Correlation Submatrix of Binary Data")
